@@ -25,7 +25,9 @@
 <script setup>
 
 defineProps({
+
   tag: String,
+
 })
 
 </script>
