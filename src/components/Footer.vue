@@ -2,7 +2,7 @@
 
   <nav class="flex flex-row justify-evenly align-middle flex-wrap object-bottom lg:flex-col lg:content-center">
 
-    <ul class="flex flex-row w-3/5 lg:flex-col lg:w-2/3">
+    <ul class="flex w-3/5 lg:flex-col lg:w-2/3">
 
       <li class="m-auto hover:border-white border-solid border-2 p-3 border-transparent cursor-pointer lg:text-center">
         Mercedes-Benz España, todos los derechos reservados
