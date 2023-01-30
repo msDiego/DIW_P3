@@ -74,7 +74,7 @@
 
       <div class="bg-gray-400 flex justify-center">
 
-        <button class="mx-10 " v-on:click="changeDisplay()">
+        <button class="mx-10 " role="button" @click="changDisplay" :style="{display : active ? 'flex' : 'none'}">
           <img src="/images/hambuger.png" class="w-6 h-6">
         </button>
 
@@ -88,26 +88,23 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+
+  data() {
+    return {
+      active: false,
+    };
+  },
+  methods: {
+    changeDisplay() {
+      this.active = !this.active;
+    },
+  },
 }
 import {
   RouterLink
 } from "vue-router";
 
-let vm = {
-  data: {
-    display: 'none'
-  },
-  computed: {
-    display: function () {
-      return this.display;
-    }
-  },
-  methods: {
-    changeDisplay: function (onclick) {
-      this.display = 'none';
-    }
-  }
-};
+
 
 </script>
