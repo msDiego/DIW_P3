@@ -8,20 +8,20 @@ const coches = [
 
   {
 
-    tag: "Berlina",
+    tag: "berlina",
     image: "/images/berlina.webp",
   },
 
   {
 
-    tag: "Compacto",
+    tag: "compacto",
     image: "/images/compacto.webp"
   },
 
   {
 
-    tag: "Clase-V",
-    image: "/images/claseV.webp"
+    tag: "monovolúmenes",
+    image: "/images/monovolumen.webp"
   },
 
   {
@@ -34,7 +34,6 @@ const coches = [
 
 </script>
 
-
 <template>
 
   <div class="my-5 relative flex">
@@ -45,8 +44,8 @@ const coches = [
       <img src="./public/images/mainPhoto.webp" class="object-cover">
     </picture>
 
-    <RouterLink to="/coches/compactos/clase-A" class="hover:underline">
-      <p class="absolute top-1/4 left-3/4 text-5xl lg:hidden">
+    <RouterLink to="/coches/compactos/clase-A" class="hover:text-current">
+      <p class="absolute top-1/4 left-3/4 text-5xl lg:hidden hover:text-current hover:underline">
         Nuevo Clase A
       </p>
     </RouterLink>
@@ -74,9 +73,9 @@ const coches = [
 
       <div class="flex justify-center my-5">
 
-        <RouterLink :to="'/coches/'+coche.tag">
+        <RouterLink :to="'/'+coche.tag">
 
-          <button class="bg-red-400 text-black p-2 font-semibold rounded hover:bg-black hover:text-white duration-200">
+          <button class="bg-white text-black p-2 font-semibold rounded duration-200 hover:bg-black hover:text-white">
             Descubre más
           </button>
 
