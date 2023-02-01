@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="flex flex-row justify-evenly align-middle flex-wrap object-bottom lg:flex-col lg:content-center">
+  <nav class="flex flex-row bg-black text-white justify-evenly align-middle flex-wrap object-bottom lg:flex-col lg:content-center">
 
     <ul class="flex w-3/5 lg:flex-col lg:w-2/3">
 
@@ -16,7 +16,7 @@
 
     </ul>
 
-    <div class="w-1/3 my-2 lg:w-2/3 lg:my-5">
+    <div class="w-1/3 py-4 lg:w-2/3 lg:my-5">
 
       <ul class="flex flex-row">
        <li class="m-auto cursor-pointer">

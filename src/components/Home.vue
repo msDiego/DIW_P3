@@ -36,7 +36,7 @@ const coches = [
 
 <template>
 
-  <div class="my-5 relative flex">
+  <div class="py-5 relative flex">
 
     <picture class="w-full">
       <source srcset="../../public/images/mainPhoto.webp" media="(min-width: 1280px)">
@@ -52,7 +52,7 @@ const coches = [
 
   </div>
 
-  <div class="flex text-center my-32 mx-8">
+  <div class="flex text-center p-16 mx-8">
     <p class="text-4xl">
       Con elegancia alemana, descubre todos nuestros vehículos para todas tus necesidades.
       Desde nuestras berlinas hasta nuestros deportivos.
@@ -86,7 +86,7 @@ const coches = [
     </div>
   </div>
 
-  <div class="z-0 my-32 flex">
+  <div class="z-0 py-32 flex">
 
    <video autoplay muted loop class="w-full" height="auto" src="/videos/MercedesF1.mp4">
    </video>
