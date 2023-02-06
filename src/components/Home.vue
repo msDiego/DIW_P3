@@ -4,6 +4,10 @@ import {
   RouterLink
 } from "vue-router";
 
+export default {
+  name: 'Home'
+
+}
 const coches = [
 
   {
@@ -70,7 +74,7 @@ const coches = [
 
       <div class="flex justify-center my-5">
 
-        <router-link :to="{name : coche.tag, params: {id: coche.tag} }">
+        <router-link :to="{name : 'TiposCoches', params: {id: coche.tag} }">
           <button class="bg-white text-black p-2 font-semibold rounded duration-200 hover:bg-black hover:text-white">
             Descubre más
           </button>

@@ -1,5 +1,3 @@
-
-
 <template>
   <main>
     <TiposCoches />
@@ -8,9 +6,9 @@
 
 <script>
 import Berlina from "@/components/Berlina.vue";
-import TiposCoches from "@/components/TiposCoches.vue";
+
 export default {
   name: "BerlinaView",
-  components: {TiposCoches, Berlina}
+  components: {Berlina}
 }
 </script>

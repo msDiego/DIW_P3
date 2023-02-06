@@ -1,23 +1,28 @@
-<script setup>
+<script>
 
 import {useRoute} from "vue-router";
 import {computed} from "vue";
 
-const url = "http://localhost:3000/"
+const url =  "http://localhost:3000/berlina"
 
 export default {
 
   data() {
+
     return {
+
       datos: {
         coches: [],
         mayor: 99999,
         menor: 0,
+        id: $route.params.id,
       }
 
     }
   },
+
   async mounted() {
+
     const response = await fetch(url);
     this.datos.coches = await response.json();
 
@@ -58,15 +63,19 @@ export default {
         </div>
 
         <div id="slide" class="my-5 flex justify-center flex-row lg:self-center">
-          <p class="px-2">{{ data.menor }}</p>
+          <p class="px-2">{{ datos.menor }}</p>
           <label class="flex align-middle">
             <input type="range" v-bind:min="'{{menor}}'" v-bind:max="'{{mayor}}'" id="slider">
           </label>
-          <p class="px-2">{{ data.mayor }}</p>
+          <p class="px-2">{{ datos.mayor }}</p>
         </div>
       </div>
 
 
+    </div>
+
+    <div v-for="coche in this.datos.coches" :key="coche.id">
+      <p>id: {{ id }}</p>
     </div>
 
   </main>

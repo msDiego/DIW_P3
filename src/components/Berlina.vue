@@ -17,6 +17,7 @@ export default {
 
     }
   },
+
   async mounted() {
     const response = await fetch(url);
     this.datos.coches = await response.json();
@@ -26,8 +27,6 @@ export default {
     this.datos.mayor = this.datos.coches[this.datos.coches.length - 1].precio;
     this.datos.menor = this.datos.coches[0].precio;
 
-    console.log(this.datos.mayor)
-    console.log(this.datos.menor)
   },
 }
 
