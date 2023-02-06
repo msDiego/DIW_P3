@@ -1,9 +1,9 @@
-<script>
+<script setup>
 
 import {useRoute} from "vue-router";
 import {computed} from "vue";
 
-const url = "http://localhost:3000/berlina"
+const url = "http://localhost:3000/"
 
 export default {
 
@@ -26,8 +26,6 @@ export default {
     this.datos.mayor = this.datos.coches[this.datos.coches.length - 1].precio;
     this.datos.menor = this.datos.coches[0].precio;
 
-    console.log(this.datos.mayor)
-    console.log(this.datos.menor)
   },
 }
 
@@ -46,8 +44,7 @@ export default {
 
     <div class="flex xl:flex-row justify-evenly lg:grid lg:grid-cols-3 lg:grid-rows-2">
 
-      <div class="flex flex-row lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 lg:flex-col lg:flex-wrap lg:justify-evenly">
-
+      <div class="flex flex-row">
         <div class="mx-5 py-2 lg:self-center">
           <button class="border-b border-solid p-4 border-black hover:border-blue-500 duration-150">
             ELÉCTRICOS
@@ -61,23 +58,16 @@ export default {
         </div>
 
         <div id="slide" class="my-5 flex justify-center flex-row lg:self-center">
-          <p class="px-2">{{ datos.menor }}</p>
+          <p class="px-2">{{ data.menor }}</p>
           <label class="flex align-middle">
             <input type="range" v-bind:min="'{{menor}}'" v-bind:max="'{{mayor}}'" id="slider">
           </label>
-          <p class="px-2">{{ datos.mayor }}</p>
+          <p class="px-2">{{ data.mayor }}</p>
         </div>
-
       </div>
 
-      <div v-for="coche in datos.coches" :key="coche.id">
-
-      </div>
 
     </div>
 
   </main>
 </template>
-
-
-

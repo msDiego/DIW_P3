@@ -7,26 +7,22 @@ import {
 const coches = [
 
   {
-
     tag: "berlina",
     image: "/images/berlina.webp",
   },
 
   {
-
     tag: "compacto",
     image: "/images/compacto.webp"
   },
 
   {
-
-    tag: "monovolúmenes",
+    tag: "monovolumen",
     image: "/images/monovolumen.webp"
   },
 
   {
-
-    tag: "AMG",
+    tag: "deportivos",
     image: "/images/amg.webp"
   },
 
@@ -61,7 +57,8 @@ const coches = [
 
   <div class="grid grid-cols-2 justify-center items-center my-10 lg:grid-cols-1">
 
-    <div v-for="coche in coches" :key="coche.tag" class="flex flex-col border-white border-solid border-2 w-3/4  m-auto my-5 ">
+    <div v-for="coche in coches" :key="coche.tag"
+         class="flex flex-col border-white border-solid border-2 w-3/4  m-auto my-5 ">
 
       <div class="my-3">
         <p class="text-2xl text-center">{{ coche.tag }}</p>
@@ -73,13 +70,12 @@ const coches = [
 
       <div class="flex justify-center my-5">
 
-        <RouterLink :to="'/'+coche.tag">
-
+        <router-link :to="{name : coche.tag, params: {id: coche.tag} }">
           <button class="bg-white text-black p-2 font-semibold rounded duration-200 hover:bg-black hover:text-white">
             Descubre más
           </button>
+        </router-link>
 
-        </RouterLink>
 
       </div>
 
@@ -88,8 +84,8 @@ const coches = [
 
   <div class="z-0 py-32 flex">
 
-   <video autoplay muted loop class="w-full" height="auto" src="/videos/MercedesF1.mp4">
-   </video>
+    <video autoplay muted loop class="w-full" height="auto" src="/videos/MercedesF1.mp4">
+    </video>
 
   </div>
 
