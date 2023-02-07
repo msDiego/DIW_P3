@@ -7,9 +7,19 @@
 <script>
 
 import TiposCoches from "@/components/TiposCoches.vue";
+
 export default {
-  name: "TipoCochesView",
-  components: {TiposCoches},
-  props: ['id']
+
+  name: "TiposCochesView",
+  components: { TiposCoches },
+
+  data() {
+    return {
+      props: {
+        id: String
+      }
+    }
+  },
 }
+
 </script>

@@ -4,7 +4,7 @@ import BerlinaView from "@/views/BerlinaView.vue";
 import CompactoView from "@/views/CompactoView.vue";
 import MonovolumenView from "@/views/MonovolumenView.vue";
 import DeportivoView from "@/views/DeportivoView.vue";
-import TipoCochesView from "@/views/TipoCochesView.vue";
+import TipoCochesView from "@/views/TiposCochesView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -1,38 +1,26 @@
-<script>
+<script setup>
 
-import {useRoute} from "vue-router";
-import {computed} from "vue";
+import {useRoute} from 'vue-router'
+import {
+  RouterLink
+} from "vue-router";
 
-const url =  "http://localhost:3000/berlina"
+const route = useRoute()
 
-export default {
+const id = route.params.id
 
-  data() {
+const url = "http://localhost:3000/" + id
 
-    return {
+const data = fetch(url).then((response) => response.json()).then( (data) => {return data;});
 
-      datos: {
-        coches: [],
-        mayor: 99999,
-        menor: 0,
-        id: $route.params.id,
-      }
+const coches = await data
 
-    }
-  },
+coches.sort((a, b) => {
+  return a.precio - b.precio
+})
 
-  async mounted() {
-
-    const response = await fetch(url);
-    this.datos.coches = await response.json();
-
-    this.datos.coches.sort(function (a, b) { return a.precio - b.precio})
-
-    this.datos.mayor = this.datos.coches[this.datos.coches.length - 1].precio;
-    this.datos.menor = this.datos.coches[0].precio;
-
-  },
-}
+const menor = coches[0].precio;
+const mayor = coches[coches.length - 1].precio
 
 
 </script>
@@ -45,7 +33,7 @@ export default {
       La berlina clásica, interpretada en clave dinámica.
       Ofrecen todo lo que necesitas: espacio, confort, seguridad e innovaciones pioneras.
     </h1>
-    <p class="px-12 py-4 text-xl">Nuestros vehículos:</p>
+    <p class="px-12 py-4 text-xl">Nuestros vehículos</p>
 
     <div class="flex xl:flex-row justify-evenly lg:grid lg:grid-cols-3 lg:grid-rows-2">
 
@@ -63,20 +51,41 @@ export default {
         </div>
 
         <div id="slide" class="my-5 flex justify-center flex-row lg:self-center">
-          <p class="px-2">{{ datos.menor }}</p>
+          <p class="px-2">{{ menor }}</p>
           <label class="flex align-middle">
             <input type="range" v-bind:min="'{{menor}}'" v-bind:max="'{{mayor}}'" id="slider">
           </label>
-          <p class="px-2">{{ datos.mayor }}</p>
+          <p class="px-2">{{ mayor }}</p>
         </div>
       </div>
 
 
     </div>
 
-    <div v-for="coche in this.datos.coches" :key="coche.id">
-      <p>id: {{ id }}</p>
+    <div class="flex flex-row justify-evenly flex-wrap py-8">
+
+      <div class="flex flex-col justify-center w-1/3 m-5 border-2  rounded-md p-4 hover:border-black duration-500">
+        <p class="text-center text-4xl">
+          {c}
+        </p>
+        <img src="public/images/CarImages/ClaseE.webp" alt="coche">
+        <p class="text-center text-2xl">
+          { c.descripcion }
+        </p>
+        <div class="flex justify-center pt-8">
+          <router-link to="/bdfsbsdf">
+            <button
+                class="text-black border-b-2 p-2 border-solid border-black font-semibold duration-200 hover:border-blue-300">
+              Descubre más
+            </button>
+          </router-link>
+        </div>
+
+      </div>
+
     </div>
+
 
   </main>
 </template>
+

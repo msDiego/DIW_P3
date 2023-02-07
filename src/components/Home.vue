@@ -4,33 +4,33 @@ import {
   RouterLink
 } from "vue-router";
 
-export default {
-  name: 'Home'
+  name =  'Home'
 
-}
-const coches = [
+  const coches = [
 
-  {
-    tag: "berlina",
-    image: "/images/berlina.webp",
-  },
+    {
+      tag: "berlina",
+      image: "/images/berlina.webp",
+    },
 
-  {
-    tag: "compacto",
-    image: "/images/compacto.webp"
-  },
+    {
+      tag: "compacto",
+      image: "/images/compacto.webp"
+    },
 
-  {
-    tag: "monovolumen",
-    image: "/images/monovolumen.webp"
-  },
+    {
+      tag: "monovolumen",
+      image: "/images/monovolumen.webp"
+    },
 
-  {
-    tag: "deportivos",
-    image: "/images/amg.webp"
-  },
+    {
+      tag: "deportivos",
+      image: "/images/amg.webp"
+    },
 
-]
+  ]
+
+
 
 </script>
 
@@ -61,15 +61,14 @@ const coches = [
 
   <div class="grid grid-cols-2 justify-center items-center my-10 lg:grid-cols-1">
 
-    <div v-for="coche in coches" :key="coche.tag"
-         class="flex flex-col border-white border-solid border-2 w-3/4  m-auto my-5 ">
+    <div v-for="coche in coches" :key="coche.tag" class="flex flex-col border-white border-solid border-2 w-3/4  m-auto my-5 ">
 
       <div class="my-3">
         <p class="text-2xl text-center">{{ coche.tag }}</p>
       </div>
 
       <div>
-        <img :src="coche.image" alt="compactos" class="w-full h-1/2">
+        <img :src="coche.image" alt="coche" class="w-full h-1/2">
       </div>
 
       <div class="flex justify-center my-5">
