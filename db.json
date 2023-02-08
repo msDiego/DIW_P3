@@ -5,32 +5,48 @@
       "precio": "49.000",
       "modelo": "Clase C",
       "motor": "combustión",
+      "potencia":"300 - 408 CV",
+      "consumo": "5L / 100km",
+      "velocidad": "250 km/h",
+      "aceleracion": "0 a 100 en 4.6 segundos",
       "descripcion": "Consumo de 5L / 100km, de 0 a 100 en 4.6 segundos, potencia entre 300 y 408 CV y velocidad máxima de 250 km/h",
-      "url": "images/CarImages/ClaseC.webp"
+      "url": "/../public/images/CarImages/ClaseC.webp"
     },
     {
       "id": 2,
       "precio": "117.000",
       "modelo": "Clase S",
       "motor": "combustión",
+      "potencia":"370 - 500 CV",
+      "consumo": "4.2L / 100km",
+      "velocidad": "2760 km/h",
+      "aceleracion": "0 a 100 en 4.4 segundos",
       "descripcion": "Consumo de 4.2L / 100km, de 0 a 100 en 4.4 segundos, potencia entre 370 y 500 CV y velocidad máxima de 276 km/h",
-      "url": "images/CarImages/ClaseS.webp"
+      "url": "/../public/images/CarImages/ClaseS.webp"
     },
     {
       "id": 3,
       "precio": "55.000",
       "modelo": "Clase E",
       "motor": "combustión",
+      "potencia":"320 - 412 CV",
+      "consumo": "4.8L / 100km",
+      "velocidad": "255 km/h",
+      "aceleracion": "0 a 100 en 4.6 segundos",
       "descripcion": "Consumo de 4.8L / 100km, de 0 a 100 en 4.6 segundos, potencia entre 320 y 412 CV y velocidad máxima de 255 km/h",
-      "url": "images/CarImages/ClaseE.webp"
+      "url": "/../public/images/CarImages/ClaseE.webp"
     },
     {
       "id": 4,
       "precio": "125.000",
       "modelo": "EQS",
       "motor": "eléctrico",
+      "potencia":"385 - 523 CV",
+      "consumo": "741 km",
+      "velocidad": "250 km/h",
+      "aceleracion": "0 a 100 en 3.2 segundos",
       "descripcion": "Autonomía de 741 km, de 0 a 100 en 3.2 segundos, carga en 31 minutos y potencia entre 385 y 523 CV",
-      "url": "images/CarImages/EQS.webp"
+      "url": "/../public/images/CarImages/EQS.webp"
     }
   ],
 
@@ -40,32 +56,48 @@
       "precio": "38.000",
       "modelo": "Clase A",
       "motor": "combustión",
+      "potencia":"310 - 422 CV",
+      "consumo": "5.4L / 100km",
+      "velocidad": "230 km/h",
+      "aceleracion": "0 a 100 en 3.9 segundos",
       "descripcion": "Consumo de 5.4L / 100km, de 0 a 100 en 3.9 segundos, potencia entre 310 y 422 CV y velocidad máxima de 230 km/h",
-      "url": "images/CarImages/ClaseA.webp"
+      "url": "/../public/images/CarImages/ClaseA.webp"
     },
     {
       "id": 6,
       "precio": "41.000",
       "modelo": "Clase B",
       "motor": "combustión",
+      "potencia":"310 - 420 CV",
+      "consumo": "5.2L / 100km",
+      "velocidad": "234 km/h",
+      "aceleracion": "0 a 100 en 4.1 segundos",
       "descripcion": "Consumo de 5.2L / 100km, de 0 a 100 en 4.1 segundos, potencia entre 310 y 420 CV y velocidad máxima de 234 km/h",
-      "url": "images/CarImages/ClaseB.webp"
+      "url": "/../public/images/CarImages/ClaseB.webp"
     },
     {
       "id": 7,
       "precio": "58.000",
       "modelo": "Clase A 4matic",
       "motor": "combustión",
+      "potencia":"330 - 480 CV",
+      "consumo": "4.5L / 100km",
+      "velocidad": "241 km/h",
+      "aceleracion": "0 a 100 en 4.2 segundos",
       "descripcion": "Consumo de 4.5L / 100km, de 0 a 100 en 4.2 segundos, potencia entre 330 y 480 CV y velocidad máxima de 241 km/h",
-      "url": "images/CarImages/ClaseA4matic.webp"
+      "url": "/../public/images/CarImages/ClaseA4matic.webp"
     },
     {
       "id": 8,
       "precio": "66.000",
       "modelo": "Clase B EQ",
       "motor": "eléctrico",
+      "potencia":"290 - 440 CV",
+      "consumo": "593km",
+      "velocidad": "240 km/h",
+      "aceleracion": "0 a 100 en 3.7 segundos",
       "descripcion": "Autonomía de 593 km, de 0 a 100 en 3.7 segundos, carga en 52 minutos y potencia entre 290 y 440 CV",
-      "url": "images/CarImages/ClaseBEQ.webp"
+      "url": "/../public/images/CarImages/ClaseBEQ.webp"
     }
   ],
 
@@ -75,32 +107,48 @@
       "precio": "63.00",
       "modelo": "Clase V",
       "motor": "combustión",
+      "consumo": "7.7L / 100km",
+      "plazas": "6 - 8",
+      "potencia": "160 - 225 CV",
+      "volumen": "4000L",
       "descripcion": "Consumo de 7.7L / 100km, entre 6 y 8 plazas, potencia entre 160 y 225 CV y volumen de carga de 4000L",
-      "url": "images/CarImages/ClaseV.webp"
+      "url": "/../public/images/CarImages/ClaseV.webp"
     },
     {
       "id": 10,
       "precio": "79.000",
       "modelo": "EQV",
       "motor": "Eléctrico",
+      "consumo": "510km",
+      "plazas": "6 - 8",
+      "potencia": "160 - 225 CV",
+      "volumen": "4000L",
       "descripcion": "Autonomía de 510 km, entre 6 y 8 plazas, carga en 35 minutos y volumen de carga de 4000L",
-      "url": "images/CarImages/EQV.webp"
+      "url": "/../public/images/CarImages/EQV.webp"
     },
     {
       "id": 11,
       "precio": "29.000",
       "modelo": "Clase T",
       "motor": "combustión",
+      "consumo": "5.9L / 100km",
+      "plazas": "5",
+      "potencia": "160 - 225 CV",
+      "volumen": "520L",
       "descripcion": "Consumo de 5.9L / 100km, 5 plazas, potencia entre 160 y 225 CV y volumen de carga de 520L",
-      "url": "images/CarImages/ClaseT.webp"
+      "url": "/../public/images/CarImages/ClaseT.webp"
     },
     {
       "id": 12,
       "precio": "82.000",
       "modelo": "Clase V Extra",
       "motor": "combustión",
+      "consumo": "7.4L / 100km",
+      "plazas": "6 - 8",
+      "potencia": "220 - 256 CV",
+      "volumen": "4800L",
       "descripcion": "Consumo de 7.4L / 100km, entre 6 y 8 plazas, potencia entre 220 y 256 CV y volumen de carga de 4800L",
-      "url": "images/CarImages/ClaseVExtra.webp"
+      "url": "/../public/images/CarImages/ClaseVExtra.webp"
     }
   ],
 
@@ -110,32 +158,48 @@
       "precio": "113.000",
       "modelo": "Clase E State AMG",
       "motor": "combustión",
+      "potencia":"435 - 612 CV",
+      "consumo": "6.1L / 100km",
+      "velocidad": "295 km/h",
+      "aceleracion": "0 a 100 en 3.8 segundos",
       "descripcion": "Consumo de 6.1L / 100km, de 0 a 100 en 3.8 segundos, potencia entre 435 y 612 CV y velocidad máxima de 295 km/h",
-      "url": "images/CarImages/ClaseEamg.webp"
+      "url": "/../public/images/CarImages/ClaseEamg.webp"
     },
     {
       "id": 14,
       "precio": "79.000",
       "modelo": "CLA AMG",
       "motor": "combustión",
+      "potencia":"341 - 473 CV",
+      "consumo": "5.9L / 100km",
+      "velocidad": "270 km/h",
+      "aceleracion": "0 a 100 en 4.1 segundos",
       "descripcion": "Consumo de 5.9L / 100km, de 0 a 100 en 4.1 segundos, potencia entre 341 y 473 CV y velocidad máxima de 270 km/h",
-      "url": "images/CarImages/CLAamg.webp"
+      "url": "/../public/images/CarImages/CLAamg.webp"
     },
     {
       "id": 15,
       "precio": "133.000",
       "modelo": "GLE Coupé AMG",
       "motor": "combustión",
+      "potencia":"458 - 640 CV",
+      "consumo": "6.3L / 100km",
+      "velocidad": "310 km/h",
+      "aceleracion": "0 a 100 en 4 segundos",
       "descripcion": "Consumo de 6.3L / 100km, de 0 a 100 en 4 segundos, potencia entre 458 y 640 CV y velocidad máxima de 310 km/h",
-      "url": "images/CarImages/GLEAMG.webp"
+      "url": "/../public/images/CarImages/GLEAMG.webp"
     },
     {
       "id": 16,
       "precio": "65.000",
       "modelo": "Clase A AMG",
       "motor": "combustión",
+      "potencia":"320 - 490 CV",
+      "consumo": "6.5L / 100km",
+      "velocidad": "280 km/h",
+      "aceleracion": "0 a 100 en 3.8 segundos",
       "descripcion": "Consumo de 6.5L / 100km, de 0 a 100 en 3.8 segundos, potencia entre 320 y 490 CV y velocidad máxima de 280 km/h",
-      "url": "images/CarImages/ClaseAamg.webp"
+      "url": "/../public/images/CarImages/ClaseAamg.webp"
     }
   ]
 }

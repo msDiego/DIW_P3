@@ -1,10 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import BerlinaView from "@/views/BerlinaView.vue";
-import CompactoView from "@/views/CompactoView.vue";
-import MonovolumenView from "@/views/MonovolumenView.vue";
-import DeportivoView from "@/views/DeportivoView.vue";
 import TipoCochesView from "@/views/TiposCochesView.vue";
+import CocheView from "@/views/CocheView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +16,14 @@ const router = createRouter({
       name: 'TiposCoches',
       component: TipoCochesView,
       props: true
+    },
+    {
+      path: '/:coche/:id',
+      name: 'CocheParticular',
+      component: CocheView,
+      props: true
     }
+
   ]
 })
 

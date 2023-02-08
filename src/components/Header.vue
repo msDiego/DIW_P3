@@ -66,7 +66,7 @@
   <!-- nav movil -->
   <nav class="border-gray-200 bg-black px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 xl:hidden">
 
-    <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <div class="container flex flex-wrap items-center justify-evenly mx-auto">
 
       <RouterLink to="/" class="flex my-4">
         <img src="/images/mercedes-logo.png" alt="logo" class="w-36 h-24">

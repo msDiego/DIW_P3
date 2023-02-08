@@ -12,7 +12,9 @@ import HomeView from './views/HomeView.vue'
     <Header />
   </header>
 
-    <RouterView/>
+<Suspense>
+  <RouterView/>
+</Suspense>
 
   <footer>
     <Footer />
