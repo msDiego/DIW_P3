@@ -6,22 +6,22 @@
     </RouterLink>
     <ul class="flex flex-row w-2/5">
       <li class="m-auto hover:border-white border-solid border-2 p-3 border-transparent text-center">
-        <RouterLink to="/coches" class="hover:text-white">
+        <RouterLink to="/" class="hover:text-white">
           Nuestros coches
         </RouterLink>
       </li>
       <li class="m-auto hover:border-white border-solid border-2 p-3 border-transparent text-center">
-        <RouterLink to="/catalogo" class="hover:text-white">
+        <RouterLink to="/" class="hover:text-white">
           Catálogo de vehículos
         </RouterLink>
       </li>
       <li class="m-auto hover:border-white border-solid border-2 p-3 border-transparent text-center">
-        <RouterLink to="/financiacion" class="hover:text-white">
+        <RouterLink to="/" class="hover:text-white">
           Gestiona tu financiación
         </RouterLink>
       </li>
       <li class="m-auto hover:border-white border-solid border-2 p-3 border-transparent text-center">
-        <RouterLink to="/postventa" class="hover:text-white">
+        <RouterLink to="/" class="hover:text-white">
           Servicio postventa
         </RouterLink>
       </li>

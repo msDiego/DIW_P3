@@ -5,6 +5,9 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['"PT Sans"'],
+    },
     extend: {},
     screens: {
       '2xl': {'max': '1535px'},

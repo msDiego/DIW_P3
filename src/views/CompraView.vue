@@ -1,15 +1,14 @@
 <template>
-<CocheParticular/>
+  <Compra/>
 </template>
 
 <script>
-
-import CocheParticular from "@/components/CocheParticular.vue";
+import Compra from "@/components/Compra.vue";
 
 export default {
 
-  name: "CocheView",
-  components: {CocheParticular},
+  name: "Compra",
+  components: {Compra},
   data() {
     return {
       props: {
@@ -20,7 +19,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -19,37 +19,150 @@ const coche = await data
 
 </script>
 
-<!-- TODO terminar de diseñar el template. Meter gradiente (?) -->
-
 <template>
 
-  <p class="text-6xl mt-10 text-center"> Modelo {{ coche.modelo }}</p>
-  <div class="flex flex-row">
-    <div class="w-3/5">
+  <!-- TODO coches eléctricos -->
+
+  <div class="flex justify-evenly align-middle mt-10">
+
+    <p class="text-6xl text-center"> Modelo {{ coche.modelo }}</p>
+
+    <router-link :to="{name : 'Compra', params: {id: useRoute().params.id, modelo: useRoute().params.coche} }">
+      <button class="bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full  duration-200 hover:bg-black">
+        CONSIGUE TU OFERTA
+      </button>
+    </router-link>
+
+  </div>
+
+
+  <div class="flex flex-col">
+
+    <div class="w-1/2 m-auto">
       <img :src="coche.url" alt="CarModel">
     </div>
-    <div v-if="useRoute().params.coche === 'monovolumen'">
-      <div class="flex flex-col text-2xl justify-evenly">
-        <ul>
-          <li v-if="coche.motor === 'Eléctrico'" class="pt-5">
-            <p>Autonomía de {{ coche.consumo }}</p>
-          </li>
-          <li v-else class="pt-5">
-            <p>Consumo de {{ coche.consumo }}</p>
-          </li>
-          <li class="pt-5">
-            <p>Capacidad de {{ coche.plazas }} plazas</p>
-          </li>
-          <li class="pt-5">
-            <p>Motor de {{ coche.potencia }}</p>
-          </li>
-          <li class="pt-5">
-            <p>Capacidad de almacenaje de {{ coche.volumen }}</p>
-          </li>
-        </ul>
 
+    <!-- Monovolumenes -->
+    <div v-if="useRoute().params.coche === 'monovolumen'" class="mb-8">
+
+      <div v-if="coche.motor === 'eléctrico'">
+      <div class="border-2 border-black shadow max-w-xs p-6">
+        <img class="m-auto" src="/public/images/icons/autonomia.webp" alt="...">
+        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          Autonomía
+        </h5>
+        <p class="mb-3 text-xl text-center font-normal">
+          {{ coche.consumo }}
+        </p>
       </div>
     </div>
+
+    <div v-else class="flex justify-evenly lg:flex-col lg:place-items-center">
+
+      <div class="border-2 border-black shadow w-1/5 p-6 lg:w-1/2 duration-300 hover:border-blue-300">
+        <img class="m-auto" src="/public/images/icons/consumo.webp" alt="...">
+        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          Consumo
+        </h5>
+        <p class="mb-3 text-xl text-center font-normal">
+          {{ coche.consumo }}
+        </p>
+      </div>
+
+      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
+        <img class="m-auto" src="/public/images/icons/asientos.webp" alt="...">
+        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          Plazas
+        </h5>
+        <p class="mb-3 text-xl text-center font-normal">
+          Capacidad de {{ coche.plazas }} plazas
+        </p>
+      </div>
+
+      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
+        <img class="m-auto" src="/public/images/icons/potencia.webp" alt="...">
+        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          Potencia
+        </h5>
+        <p class="mb-3 text-xl text-center font-normal">
+          {{ coche.potencia }}
+        </p>
+      </div>
+
+      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
+        <img class="m-auto" src="/public/images/icons/volumen.webp" alt="...">
+        <h5 class="mb-2 text-2xl pt-2 text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          Volumen de maletero
+        </h5>
+        <p class="mb-3 text-xl text-center font-normal">
+          Hasta {{ coche.volumen }}
+        </p>
+      </div>
+
+    </div>
+    </div>
+
+  <!-- Resto de coches -->
+    <div v-else class="mb-8">
+
+      <div v-if="coche.motor === 'eléctrico'">
+        <div class="border-2 border-black shadow max-w-xs p-6">
+          <img class="m-auto" src="/public/images/icons/autonomia.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+            Autonomía
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.consumo }}
+          </p>
+        </div>
+      </div>
+
+      <div v-else class="flex justify-evenly lg:flex-col lg:place-items-center">
+
+        <div class="border-2 border-black shadow w-1/5 p-6 lg:w-1/2 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+          <img class="m-auto" src="/public/images/icons/consumo.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+            Consumo
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.consumo }}
+          </p>
+        </div>
+
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+          <img class="m-auto" src="/public/images/icons/aceleracion.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+            Aceleración
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.aceleracion }}
+          </p>
+        </div>
+
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+          <img class="m-auto" src="/public/images/icons/potencia.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+            Potencia
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.potencia }}
+          </p>
+        </div>
+
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+          <img class="m-auto" src="/public/images/icons/velocidad.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+            Velocidad punta
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.velocidad }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
 

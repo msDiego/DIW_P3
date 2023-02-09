@@ -19,7 +19,7 @@
       "motor": "combustión",
       "potencia":"370 - 500 CV",
       "consumo": "4.2L / 100km",
-      "velocidad": "2760 km/h",
+      "velocidad": "276 km/h",
       "aceleracion": "0 a 100 en 4.4 segundos",
       "descripcion": "Consumo de 4.2L / 100km, de 0 a 100 en 4.4 segundos, potencia entre 370 y 500 CV y velocidad máxima de 276 km/h",
       "url": "/../public/images/CarImages/ClaseS.webp"
