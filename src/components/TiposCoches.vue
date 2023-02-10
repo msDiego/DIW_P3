@@ -30,10 +30,22 @@ const mayor = coches[coches.length - 1].precio
 
   <main class="bg-white text-black my-16">
 
-    <h1 class="text-4xl text-center mx-12 pt-8 ">
-      La berlina clásica, interpretada en clave dinámica.
-      Ofrecen todo lo que necesitas: espacio, confort, seguridad e innovaciones pioneras.
-    </h1>
+      <h1 v-if="id === 'berlina'" class="text-4xl text-center mx-12 pt-8 ">
+        La berlina clásica, interpretada en clave dinámica.
+        Ofrecen todo lo que necesitas: espacio, confort, seguridad e innovaciones pioneras.
+      </h1>
+      <h1 v-else-if="id === 'compacto'" class="text-4xl text-center mx-12 pt-8 ">
+        Compactos con todo lo que necesitas en un espacio reducido.
+        Menos chasis con misma potencia.
+      </h1>
+      <h1 v-else-if="id === 'monovolumen'" class="text-4xl text-center mx-12 pt-8 ">
+        Monovolúmenes de gran capacidad, torque y confort.
+        Disfruta de tus viajes acompañado del mejor modo.
+      </h1>
+      <h1 v-else class="text-4xl text-center mx-12 pt-8 ">
+        Potencia, clase y elegancia. Siente la carretera con la gama AMG
+        como nunca antes.
+      </h1>
 
     <div class="z-0 py-32 flex">
 

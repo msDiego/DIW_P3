@@ -7,15 +7,17 @@ import Compra from "@/components/Compra.vue";
 
 export default {
 
-  name: "Compra",
+  name: "CompraView",
   components: {Compra},
+
   data() {
     return {
       props: {
-        coche: Number,
-        id: String
+        coche: String,
+        id: Number
       }
     }
   },
 }
+
 </script>

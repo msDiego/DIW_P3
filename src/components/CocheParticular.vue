@@ -21,14 +21,13 @@ const coche = await data
 
 <template>
 
-  <!-- TODO coches eléctricos -->
-
   <div class="flex justify-evenly align-middle mt-10">
 
     <p class="text-6xl text-center"> Modelo {{ coche.modelo }}</p>
 
     <router-link :to="{name : 'Compra', params: {id: useRoute().params.id, modelo: useRoute().params.coche} }">
-      <button class="bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full  duration-200 hover:bg-black">
+      <button
+          class="bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full  duration-200 hover:bg-black">
         CONSIGUE TU OFERTA
       </button>
     </router-link>
@@ -45,113 +44,119 @@ const coche = await data
     <!-- Monovolumenes -->
     <div v-if="useRoute().params.coche === 'monovolumen'" class="mb-8">
 
-      <div v-if="coche.motor === 'eléctrico'">
-      <div class="border-2 border-black shadow max-w-xs p-6">
-        <img class="m-auto" src="/public/images/icons/autonomia.webp" alt="...">
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-          Autonomía
-        </h5>
-        <p class="mb-3 text-xl text-center font-normal">
-          {{ coche.consumo }}
-        </p>
-      </div>
-    </div>
+      <!-- cartas -->
+      <div class="flex justify-evenly lg:flex-col lg:place-items-center">
 
-    <div v-else class="flex justify-evenly lg:flex-col lg:place-items-center">
+        <!-- Carta eléctrico -->
+        <div v-if="coche.motor === 'Eléctrico'"
+             class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
 
-      <div class="border-2 border-black shadow w-1/5 p-6 lg:w-1/2 duration-300 hover:border-blue-300">
-        <img class="m-auto" src="/public/images/icons/consumo.webp" alt="...">
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-          Consumo
-        </h5>
-        <p class="mb-3 text-xl text-center font-normal">
-          {{ coche.consumo }}
-        </p>
-      </div>
-
-      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
-        <img class="m-auto" src="/public/images/icons/asientos.webp" alt="...">
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-          Plazas
-        </h5>
-        <p class="mb-3 text-xl text-center font-normal">
-          Capacidad de {{ coche.plazas }} plazas
-        </p>
-      </div>
-
-      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
-        <img class="m-auto" src="/public/images/icons/potencia.webp" alt="...">
-        <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-          Potencia
-        </h5>
-        <p class="mb-3 text-xl text-center font-normal">
-          {{ coche.potencia }}
-        </p>
-      </div>
-
-      <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
-        <img class="m-auto" src="/public/images/icons/volumen.webp" alt="...">
-        <h5 class="mb-2 text-2xl pt-2 text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-          Volumen de maletero
-        </h5>
-        <p class="mb-3 text-xl text-center font-normal">
-          Hasta {{ coche.volumen }}
-        </p>
-      </div>
-
-    </div>
-    </div>
-
-  <!-- Resto de coches -->
-    <div v-else class="mb-8">
-
-      <div v-if="coche.motor === 'eléctrico'">
-        <div class="border-2 border-black shadow max-w-xs p-6">
           <img class="m-auto" src="/public/images/icons/autonomia.webp" alt="...">
-          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
             Autonomía
           </h5>
           <p class="mb-3 text-xl text-center font-normal">
             {{ coche.consumo }}
           </p>
         </div>
-      </div>
-
-      <div v-else class="flex justify-evenly lg:flex-col lg:place-items-center">
-
-        <div class="border-2 border-black shadow w-1/5 p-6 lg:w-1/2 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+        <!-- Carta combustión -->
+        <div v-else class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
           <img class="m-auto" src="/public/images/icons/consumo.webp" alt="...">
-          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
             Consumo
           </h5>
           <p class="mb-3 text-xl text-center font-normal">
             {{ coche.consumo }}
           </p>
         </div>
-
-        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
-          <img class="m-auto" src="/public/images/icons/aceleracion.webp" alt="...">
-          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
-            Aceleración
+        <!-- Carta plazas -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
+          <img class="m-auto" src="/public/images/icons/asientos.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Plazas
           </h5>
           <p class="mb-3 text-xl text-center font-normal">
-            {{ coche.aceleracion }}
+            Capacidad de {{ coche.plazas }} plazas
           </p>
         </div>
-
-        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+        <!-- Carta potencia -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
           <img class="m-auto" src="/public/images/icons/potencia.webp" alt="...">
-          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
             Potencia
           </h5>
           <p class="mb-3 text-xl text-center font-normal">
             {{ coche.potencia }}
           </p>
         </div>
+        <!-- Carta volumen -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
+          <img class="m-auto" src="/public/images/icons/volumen.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Volumen de carga
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.volumen }}
+          </p>
+        </div>
 
-        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2 lg:mb-2">
+      </div>
+
+
+    </div>
+
+    <!-- Resto de coches -->
+    <div v-else class="mb-8">
+
+      <!-- cartas -->
+      <div class="flex justify-evenly lg:flex-col lg:place-items-center">
+
+        <!-- Carta eléctrico -->
+        <div v-if="coche.motor === 'Eléctrico'"
+             class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:w-1/2">
+
+          <img class="m-auto" src="/public/images/icons/autonomia.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Autonomía
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.consumo }}
+          </p>
+        </div>
+        <!-- Carta combustión -->
+        <div v-else class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
+          <img class="m-auto" src="/public/images/icons/consumo.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Consumo
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.consumo }}
+          </p>
+        </div>
+        <!-- Carta aceleración -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
+          <img class="m-auto" src="/public/images/icons/aceleracion.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Aceleración
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.aceleracion }}
+          </p>
+        </div>
+        <!-- Carta potencia -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
+          <img class="m-auto" src="/public/images/icons/potencia.webp" alt="...">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
+            Potencia
+          </h5>
+          <p class="mb-3 text-xl text-center font-normal">
+            {{ coche.potencia }}
+          </p>
+        </div>
+        <!-- Carta volumen -->
+        <div class="border-2 border-black shadow w-1/5 p-6 duration-300 hover:border-blue-300 lg:my-2 lg:w-1/2">
           <img class="m-auto" src="/public/images/icons/velocidad.webp" alt="...">
-          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl text-center font-semibold tracking-tight text-black dark:text-white">
             Velocidad punta
           </h5>
           <p class="mb-3 text-xl text-center font-normal">
