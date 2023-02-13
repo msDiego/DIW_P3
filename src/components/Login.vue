@@ -5,6 +5,7 @@
 
 
 <template>
+  <!-- TODO terminar el login. Realizar la lógica de la verificación -->
 
   <main class="flex my-32 mx-auto w-1/2 justify-center">
 

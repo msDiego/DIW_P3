@@ -65,7 +65,6 @@ function calcFinanciacion() {
 
 <template>
 
-  <!-- TODO terminar este componente -->
   <div class="flex justify-between my-12 px-16 text-3xl">
     <h1 class="p-2 border-b-2 border-black">
       PERSONALIZA TU FINANCIACIÓN
