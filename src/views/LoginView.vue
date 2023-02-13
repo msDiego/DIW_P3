@@ -1,13 +1,11 @@
-<template>
-  <Login/>
-</template>
-
-<script>
+<script setup>
 
 import Login from '../components/Login.vue'
 
-export default {
-  name: 'LoginView',
-  components: { Login },
-}
 </script>
+
+<template>
+
+  <Login/>
+
+</template>

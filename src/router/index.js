@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import TipoCochesView from "@/views/TiposCochesView.vue";
 import CocheView from "@/views/CocheView.vue";
 import CompraView from "@/views/CompraView.vue";
-import LoginView from "@/views/CompraView.vue";
+import LoginView from "@/views/LoginView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: LoginView,
     },
     {
       path: '/:id',
@@ -31,12 +36,8 @@ const router = createRouter({
       name: 'Compra',
       component: CompraView,
       props: true
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: LoginView,
     }
+
 
   ]
 })
