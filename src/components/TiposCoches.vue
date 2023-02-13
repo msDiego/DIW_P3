@@ -1,6 +1,7 @@
 <script setup>
 
 import {useRoute} from 'vue-router'
+
 import {
   RouterLink
 } from "vue-router";

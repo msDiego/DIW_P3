@@ -27,11 +27,9 @@
       </li>
     </ul>
 
-    <div class="my-10 border-solid border-2 border-black flex flex-row rounded-full">
-      <input type="text" name="busqueda" id="busqueda" placeholder="Busca aquí tu modelo"
-             class="my-1 mx-1 focus:outline-none rounded-full text-center text-black">
-      <RouterLink to="/busqueda" class="mx-2 my-1">
-        <img src="/images/lens.ico" class="w-8 h-8">
+    <div class="my-10 items-center border-black flex">
+      <RouterLink to="/login" class="mx-2 underline my-1 hover:text-white">
+        Login Administrador
       </RouterLink>
     </div>
 

@@ -3,9 +3,11 @@ import HomeView from '../views/HomeView.vue'
 import TipoCochesView from "@/views/TiposCochesView.vue";
 import CocheView from "@/views/CocheView.vue";
 import CompraView from "@/views/CompraView.vue";
+import LoginView from "@/views/CompraView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
     {
       path: '/',
@@ -29,8 +31,12 @@ const router = createRouter({
       name: 'Compra',
       component: CompraView,
       props: true
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: LoginView,
     }
-
 
   ]
 })

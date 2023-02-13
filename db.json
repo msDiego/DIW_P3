@@ -2,7 +2,7 @@
   "berlina": [
     {
       "id": 1,
-      "precio": "49.000",
+      "precio": "49000",
       "modelo": "Clase C",
       "motor": "combustión",
       "potencia":"300 - 408 CV",
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "precio": "117.000",
+      "precio": "117000",
       "modelo": "Clase S",
       "motor": "combustión",
       "potencia":"370 - 500 CV",
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "precio": "55.000",
+      "precio": "55000",
       "modelo": "Clase E",
       "motor": "combustión",
       "potencia":"320 - 412 CV",
@@ -38,7 +38,7 @@
     },
     {
       "id": 4,
-      "precio": "125.000",
+      "precio": "125000",
       "modelo": "EQS",
       "motor": "eléctrico",
       "potencia":"385 - 523 CV",
@@ -53,7 +53,7 @@
   "compacto": [
     {
       "id": 5,
-      "precio": "38.000",
+      "precio": "38000",
       "modelo": "Clase A",
       "motor": "combustión",
       "potencia":"310 - 422 CV",
@@ -65,7 +65,7 @@
     },
     {
       "id": 6,
-      "precio": "41.000",
+      "precio": "41000",
       "modelo": "Clase B",
       "motor": "combustión",
       "potencia":"310 - 420 CV",
@@ -77,7 +77,7 @@
     },
     {
       "id": 7,
-      "precio": "58.000",
+      "precio": "58000",
       "modelo": "Clase A 4matic",
       "motor": "combustión",
       "potencia":"330 - 480 CV",
@@ -89,7 +89,7 @@
     },
     {
       "id": 8,
-      "precio": "66.000",
+      "precio": "66000",
       "modelo": "Clase B EQ",
       "motor": "eléctrico",
       "potencia":"290 - 440 CV",
@@ -104,7 +104,7 @@
   "monovolumen": [
     {
       "id": 9,
-      "precio": "63.00",
+      "precio": "63000",
       "modelo": "Clase V",
       "motor": "combustión",
       "consumo": "7.7L / 100km",
@@ -116,7 +116,7 @@
     },
     {
       "id": 10,
-      "precio": "79.000",
+      "precio": "79000",
       "modelo": "EQV",
       "motor": "Eléctrico",
       "consumo": "510km",
@@ -128,7 +128,7 @@
     },
     {
       "id": 11,
-      "precio": "29.000",
+      "precio": "29000",
       "modelo": "Clase T",
       "motor": "combustión",
       "consumo": "5.9L / 100km",
@@ -140,7 +140,7 @@
     },
     {
       "id": 12,
-      "precio": "82.000",
+      "precio": "82000",
       "modelo": "Clase V Extra",
       "motor": "combustión",
       "consumo": "7.4L / 100km",
@@ -155,7 +155,7 @@
   "deportivos": [
     {
       "id": 13,
-      "precio": "113.000",
+      "precio": "113000",
       "modelo": "Clase E State AMG",
       "motor": "combustión",
       "potencia":"435 - 612 CV",
@@ -167,7 +167,7 @@
     },
     {
       "id": 14,
-      "precio": "79.000",
+      "precio": "79000",
       "modelo": "CLA AMG",
       "motor": "combustión",
       "potencia":"341 - 473 CV",
@@ -179,7 +179,7 @@
     },
     {
       "id": 15,
-      "precio": "133.000",
+      "precio": "133000",
       "modelo": "GLE Coupé AMG",
       "motor": "combustión",
       "potencia":"458 - 640 CV",
@@ -191,7 +191,7 @@
     },
     {
       "id": 16,
-      "precio": "65.000",
+      "precio": "65000",
       "modelo": "Clase A AMG",
       "motor": "combustión",
       "potencia":"320 - 490 CV",
