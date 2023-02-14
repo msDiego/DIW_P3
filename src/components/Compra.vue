@@ -30,7 +30,7 @@ pagos.value = {
 
 function comprobacionInput() {
 
-  if ( !isNaN(entrada.value) && (minEntrada <= entrada.value && entrada.value <= maxEntrada)) {
+  if (!isNaN(entrada.value) && (minEntrada <= entrada.value && entrada.value <= maxEntrada)) {
 
     document.getElementById("error").style.display = "none";
 
@@ -50,13 +50,34 @@ function comprobacionInput() {
 function calcFinanciacion() {
 
 
-    pagos.value.precioFinal =  parseFloat((coche.precio - entrada.value).toFixed(2))
-    pagos.value.ultimoPago = parseFloat((pagos.value.precioFinal * 35 / 100).toFixed(2))
-    pagos.value.mensualidad =  parseFloat( ((pagos.value.precioFinal - pagos.value.ultimoPago) / cuotas.value).toFixed(2))
+  pagos.value.precioFinal = parseFloat((coche.precio - entrada.value).toFixed(2))
+  pagos.value.ultimoPago = parseFloat((pagos.value.precioFinal * 35 / 100).toFixed(2))
+  pagos.value.mensualidad = parseFloat(((pagos.value.precioFinal - pagos.value.ultimoPago) / cuotas.value).toFixed(2))
 
-
-  console.log(pagos.value)
   document.getElementById('fin').style.display = "block"
+
+}
+
+function postCompra() {
+
+  let db = "http://localhost:3000/compras"
+
+  let compra = {
+    "modelo": coche.modelo,
+    "valor": parseFloat(coche.precio),
+    "plazos": parseFloat(cuotas.value),
+    "entrada": parseFloat(entrada.value),
+  }
+
+  fetch(db, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(compra),
+  }).then((response) => response.json()).then(() => {
+        alert("Se ha realizado la compra!")
+      })
 
 }
 
@@ -81,9 +102,10 @@ function calcFinanciacion() {
     <p>ENTRADA <br> min: {{ minEntrada }}€ / max: {{ maxEntrada }}€</p>
     <p id="error" class="text-red-500 hidden">Este campo es incorrecto*</p>
 
-    <input class="my-1 mx-1 w-2/3 self-center focus:outline-none p-3 rounded text-center text-black bg-gray-200 text-3xl"
-           type="text" v-model="entrada" :placeholder="minEntrada + '€    -    ' + maxEntrada + '€'"
-           name="entrada" id="entrada" required>
+    <input
+        class="my-1 mx-1 w-2/3 self-center focus:outline-none p-3 rounded text-center text-black bg-gray-200 text-3xl"
+        type="text" v-model="entrada" :placeholder="minEntrada + '€    -    ' + maxEntrada + '€'"
+        name="entrada" id="entrada" required>
   </div>
 
   <!-- Plazos de pago -->
@@ -125,12 +147,12 @@ function calcFinanciacion() {
     </div>
 
     <div class="flex justify-evenly text-2xl m-12 ">
-      <p id="cuota">Precio a pagar al mes: {{pagos.mensualidad}}€</p>
-      <p id="lastCuota">Última cuota: {{pagos.ultimoPago}}€ </p>
+      <p id="cuota">Precio a pagar al mes: {{ pagos.mensualidad }}€</p>
+      <p id="lastCuota">Última cuota: {{ pagos.ultimoPago }}€ </p>
     </div>
 
-    <button
-        class="m-auto bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full  duration-200 hover:bg-black">
+    <button v-on:click="postCompra()"
+            class="m-auto bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full  duration-200 hover:bg-black">
       Finaliza tu compra
     </button>
 

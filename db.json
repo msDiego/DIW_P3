@@ -5,7 +5,7 @@
       "precio": "49000",
       "modelo": "Clase C",
       "motor": "combustión",
-      "potencia":"300 - 408 CV",
+      "potencia": "300 - 408 CV",
       "consumo": "5L / 100km",
       "velocidad": "250 km/h",
       "aceleracion": "0 a 100 en 4.6 segundos",
@@ -17,7 +17,7 @@
       "precio": "117000",
       "modelo": "Clase S",
       "motor": "combustión",
-      "potencia":"370 - 500 CV",
+      "potencia": "370 - 500 CV",
       "consumo": "4.2L / 100km",
       "velocidad": "276 km/h",
       "aceleracion": "0 a 100 en 4.4 segundos",
@@ -29,7 +29,7 @@
       "precio": "55000",
       "modelo": "Clase E",
       "motor": "combustión",
-      "potencia":"320 - 412 CV",
+      "potencia": "320 - 412 CV",
       "consumo": "4.8L / 100km",
       "velocidad": "255 km/h",
       "aceleracion": "0 a 100 en 4.6 segundos",
@@ -41,7 +41,7 @@
       "precio": "125000",
       "modelo": "EQS",
       "motor": "eléctrico",
-      "potencia":"385 - 523 CV",
+      "potencia": "385 - 523 CV",
       "consumo": "741 km",
       "velocidad": "250 km/h",
       "aceleracion": "0 a 100 en 3.2 segundos",
@@ -49,14 +49,13 @@
       "url": "/../public/images/CarImages/EQS.webp"
     }
   ],
-
   "compacto": [
     {
       "id": 5,
       "precio": "38000",
       "modelo": "Clase A",
       "motor": "combustión",
-      "potencia":"310 - 422 CV",
+      "potencia": "310 - 422 CV",
       "consumo": "5.4L / 100km",
       "velocidad": "230 km/h",
       "aceleracion": "0 a 100 en 3.9 segundos",
@@ -68,7 +67,7 @@
       "precio": "41000",
       "modelo": "Clase B",
       "motor": "combustión",
-      "potencia":"310 - 420 CV",
+      "potencia": "310 - 420 CV",
       "consumo": "5.2L / 100km",
       "velocidad": "234 km/h",
       "aceleracion": "0 a 100 en 4.1 segundos",
@@ -80,7 +79,7 @@
       "precio": "58000",
       "modelo": "Clase A 4matic",
       "motor": "combustión",
-      "potencia":"330 - 480 CV",
+      "potencia": "330 - 480 CV",
       "consumo": "4.5L / 100km",
       "velocidad": "241 km/h",
       "aceleracion": "0 a 100 en 4.2 segundos",
@@ -92,7 +91,7 @@
       "precio": "66000",
       "modelo": "Clase B EQ",
       "motor": "eléctrico",
-      "potencia":"290 - 440 CV",
+      "potencia": "290 - 440 CV",
       "consumo": "593km",
       "velocidad": "240 km/h",
       "aceleracion": "0 a 100 en 3.7 segundos",
@@ -100,7 +99,6 @@
       "url": "/../public/images/CarImages/ClaseBEQ.webp"
     }
   ],
-
   "monovolumen": [
     {
       "id": 9,
@@ -151,14 +149,13 @@
       "url": "/../public/images/CarImages/ClaseVExtra.webp"
     }
   ],
-
   "deportivos": [
     {
       "id": 13,
       "precio": "113000",
       "modelo": "Clase E State AMG",
       "motor": "combustión",
-      "potencia":"435 - 612 CV",
+      "potencia": "435 - 612 CV",
       "consumo": "6.1L / 100km",
       "velocidad": "295 km/h",
       "aceleracion": "0 a 100 en 3.8 segundos",
@@ -170,7 +167,7 @@
       "precio": "79000",
       "modelo": "CLA AMG",
       "motor": "combustión",
-      "potencia":"341 - 473 CV",
+      "potencia": "341 - 473 CV",
       "consumo": "5.9L / 100km",
       "velocidad": "270 km/h",
       "aceleracion": "0 a 100 en 4.1 segundos",
@@ -182,7 +179,7 @@
       "precio": "133000",
       "modelo": "GLE Coupé AMG",
       "motor": "combustión",
-      "potencia":"458 - 640 CV",
+      "potencia": "458 - 640 CV",
       "consumo": "6.3L / 100km",
       "velocidad": "310 km/h",
       "aceleracion": "0 a 100 en 4 segundos",
@@ -194,7 +191,7 @@
       "precio": "65000",
       "modelo": "Clase A AMG",
       "motor": "combustión",
-      "potencia":"320 - 490 CV",
+      "potencia": "320 - 490 CV",
       "consumo": "6.5L / 100km",
       "velocidad": "280 km/h",
       "aceleracion": "0 a 100 en 3.8 segundos",
@@ -202,12 +199,27 @@
       "url": "/../public/images/CarImages/ClaseAamg.webp"
     }
   ],
-
   "users": [
     {
       "id": 17,
       "user": "DWEC",
       "password": "practicavue3"
+    }
+  ],
+  "compras": [
+    {
+      "modelo": null,
+      "valor": 113000,
+      "plazos": 36,
+      "entrada": 15000,
+      "id": 1
+    },
+    {
+      "modelo": null,
+      "valor": 29000,
+      "plazos": 36,
+      "entrada": 7000,
+      "id": 2
     }
   ]
 }

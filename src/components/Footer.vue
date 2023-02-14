@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="flex flex-row bg-black text-white justify-evenly align-middle flex-wrap object-bottom lg:flex-col lg:content-center">
+  <nav class="flex flex-row bg-black text-white bottom-0 justify-evenly align-middle flex-wrap object-bottom lg:flex-col lg:content-center">
 
     <ul class="flex w-3/5 lg:flex-col lg:w-2/3">
 
