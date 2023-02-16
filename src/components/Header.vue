@@ -27,10 +27,17 @@
       </li>
     </ul>
 
-    <div class="my-10 items-center border-black flex">
+    <div v-show="cookies.cookies.get('Logged') !== 'true'" class="my-10 items-center border-black flex">
       <RouterLink to="/login" class="mx-2 underline my-1 hover:text-white">
         Login Administrador
       </RouterLink>
+    </div>
+
+    <div v-if="cookies.cookies.get('Logged') === 'true'" class="my-10 items-center border-black flex">
+      <p class="py-2">Admin Logeado</p>
+      <button @click="deleteCookie" class="m-2 p-1 text-white border h-1/2 border-white font-semibold h-full duration-200">
+        Cerrar sesión
+      </button>
     </div>
 
   </nav>
@@ -85,24 +92,36 @@
 </template>
 
 <script>
+import router from "@/router";
+
 export default {
   name: "Header",
 
   data() {
     return {
       active: false,
+      cookies: useCookies()
     };
   },
   methods: {
     changeDisplay() {
       this.active = !this.active;
     },
+    deleteCookie() {
+      useCookies().cookies.remove("Logged")
+      router.replace('Home')
+      alert("Sesión cerrada")
+      location.reload()
+    }
   },
 }
 import {
   RouterLink
 } from "vue-router";
 
+import {
+  useCookies
+} from "vue3-cookies";
 
 
 </script>

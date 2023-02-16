@@ -208,17 +208,17 @@
   ],
   "compras": [
     {
-      "modelo": null,
+      "modelo": "Clase A",
       "valor": 113000,
       "plazos": 36,
       "entrada": 15000,
       "id": 1
     },
     {
-      "modelo": null,
+      "modelo": "Clase B",
       "valor": 29000,
       "plazos": 36,
-      "entrada": 7000,
+      "entrada": "1",
       "id": 2
     }
   ]

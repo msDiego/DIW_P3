@@ -1,11 +1,11 @@
 <script setup>
 
-import {useCookies} from "vue3-cookies";
 import {ref} from "vue";
 import router from "@/router";
+import {useCookies} from "vue3-cookies";
+import {onMounted} from "vue";
 
-// TODO implementar uso de cookies
-
+const cookies = useCookies()
 const url = "http://localhost:3000/compras";
 
 let compras
@@ -16,6 +16,10 @@ allVentas.value = false
 const oneVenta = ref()
 oneVenta.value = false
 const id = ref()
+
+onMounted( () => {
+  cookies.cookies.get("Logged") !== "true" ? router.push('Login') : router.push('Admin')
+})
 
 async function showCompras() {
 
@@ -66,12 +70,6 @@ function deleteCompra(idVenta){
             class="mt-8 mx-auto bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full duration-200 hover:bg-black">
       Ver una compra
     </button>
-    <!-- TODO método PATCH para terminar el crud -->
-    <button
-        class="mt-8 mx-auto bg-blue-500 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full duration-200 hover:bg-black">
-      Modificar una compra
-    </button>
-
 
   </div>
 
@@ -80,27 +78,27 @@ function deleteCompra(idVenta){
     <div v-for="c in compras" :key="c.id"
          class="flex flex-col justify-center w-1/3 m-5 border-2 rounded-md p-4 hover:border-black duration-500 lg:w-1/2">
 
-      <p class="text-center text-4xl">
-        Modelo comprado: {{ c.modelo }}
-      </p>
+      <ul>
+        <li>Modelo: {{c.modelo}}</li>
+        <li>Precio de venta: {{c.valor}}€</li>
+        <li>Plazos de pago: {{c.plazos}}</li>
+        <li>Entrada pagada: {{c.entrada}}€</li>
+      </ul>
+     <div class="flex flex-wrap justify-evenly h-1/4 my-4">
 
-      <p class="text-center text-2xl">
-        Precio de venta: {{ c.valor }}€
-      </p>
+       <button class="mx-auto bg-blue-400 tracking-wider text-white border border-black p-2 font-semibold duration-200 hover:bg-black">
+         <router-link class="hover:text-white" :to="{name:'Modificar', params: {id: c.id}}">
+           Modificar
+         </router-link>
+       </button>
 
-      <p class="text-center text-2xl">
-        Plazos de pago: {{ c.plazos }} meses
-      </p>
+       <button @click="deleteCompra(c.id)"
+               class="mx-auto bg-red-400 tracking-wider text-white border border-black p-2 font-semibold duration-200 hover:bg-black">
+         Eliminar
+       </button>
+       <p class="text-center py-2">CUIDADO! Se eliminará permanentemente</p>
 
-      <p class="text-center text-2xl">
-        Entrada pagada: {{ c.entrada }}€
-      </p>
-
-      <button @click="deleteCompra(c.id)"
-          class="mt-8 mx-auto bg-red-400 tracking-wider text-white border border-black px-8 py-2 font-semibold h-full duration-200 hover:bg-black">
-        Eliminar
-      </button>
-      <p class="text-center py-2">CUIDADO! Se eliminará permanentemente</p>
+     </div>
       <p>id: {{c.id}}</p>
 
     </div>

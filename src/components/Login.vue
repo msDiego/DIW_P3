@@ -1,8 +1,10 @@
 <script setup>
 
-
+import {useCookies} from "vue3-cookies";
 import {ref} from "vue";
 import router from "@/router";
+
+const cookies = useCookies()
 
 const url = "http://localhost:3000/users/17"
 
@@ -16,7 +18,8 @@ const password = ref()
 function checkLogin(){
 
   if (username.value === user.user && password.value === user.password){
-    router.push("Admin")
+    cookies.cookies.set("Logged", "true", "1h")
+    router.replace('Admin')
   }
   else {
     alert("Las credenciales son incorrectas")
@@ -34,8 +37,7 @@ function showInfo(){
 
 <template>
 
-
-  <main class="flex my-32 mx-auto w-1/2 justify-center">
+  <main class="flex my-32 mx-auto w-1/2 justify-center lg:min-w-full">
 
     <div class="flex flex-col border-2 solid border-black rounded p-4 w-3/5">
 
