@@ -46,7 +46,7 @@ Podríamos así decir que se han seguido los criterios UI/UX vistos durante el c
 Una vez hecha la revisión de rendimiento usando Lighthouse, vemos que la puntuación obtenida
 es de 70 puntos sobre 100:
 
-![](../../Imágenes/Capturas de pantalla/Captura desde 2023-02-16 16-42-52.png)
+![](Lighthouse_Performance.png)
 
 El proyecto cuenta con las siguientes páginas:
 
